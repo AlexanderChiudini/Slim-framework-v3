@@ -499,17 +499,17 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.3.4",
-            "version_normalized": "3.3.4.0",
+            "version": "v3.3.0",
+            "version_normalized": "3.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "65cb6f0b956485e1664f13d023c55298a4bb59ca"
+                "reference": "1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/65cb6f0b956485e1664f13d023c55298a4bb59ca",
-                "reference": "65cb6f0b956485e1664f13d023c55298a4bb59ca",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5",
+                "reference": "1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5",
                 "shasum": ""
             },
             "require": {
@@ -519,9 +519,9 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
             },
-            "time": "2021-11-25T13:46:55+00:00",
+            "time": "2021-02-08T09:54:36+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -562,7 +562,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.3.4"
+                "source": "https://github.com/twigphp/Twig/tree/v3.3.0"
             },
             "funding": [
                 {
