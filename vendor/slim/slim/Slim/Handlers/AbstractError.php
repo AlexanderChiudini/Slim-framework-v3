@@ -1,16 +1,15 @@
 <?php
 /**
- * Slim Framework (http://slimframework.com)
+ * Slim Framework (https://slimframework.com)
  *
- * @link      https://github.com/slimphp/Slim
- * @copyright Copyright (c) 2011-2016 Josh Lockhart
- * @license   https://github.com/slimphp/Slim/blob/3.x/LICENSE.md (MIT License)
+ * @license https://github.com/slimphp/Slim/blob/3.x/LICENSE.md (MIT License)
  */
+
 namespace Slim\Handlers;
 
-/**
- * Abstract Slim application error handler
- */
+use Exception;
+use Throwable;
+
 abstract class AbstractError extends AbstractHandler
 {
     /**
@@ -19,8 +18,6 @@ abstract class AbstractError extends AbstractHandler
     protected $displayErrorDetails;
 
     /**
-     * Constructor
-     *
      * @param bool $displayErrorDetails Set to true to display full details
      */
     public function __construct($displayErrorDetails = false)
@@ -31,7 +28,7 @@ abstract class AbstractError extends AbstractHandler
     /**
      * Write to the error log if displayErrorDetails is false
      *
-     * @param \Exception|\Throwable $throwable
+     * @param Exception|Throwable $throwable
      *
      * @return void
      */
@@ -43,20 +40,20 @@ abstract class AbstractError extends AbstractHandler
 
         $message = 'Slim Application Error:' . PHP_EOL;
         $message .= $this->renderThrowableAsText($throwable);
-        while ($error = $throwable->getPrevious()) {
+        while ($throwable = $throwable->getPrevious()) {
             $message .= PHP_EOL . 'Previous error:' . PHP_EOL;
             $message .= $this->renderThrowableAsText($throwable);
         }
 
         $message .= PHP_EOL . 'View in rendered output by enabling the "displayErrorDetails" setting.' . PHP_EOL;
 
-        error_log($message);
+        $this->logError($message);
     }
 
     /**
      * Render error as Text.
      *
-     * @param \Exception|\Throwable $throwable
+     * @param Exception|Throwable $throwable
      *
      * @return string
      */
@@ -85,5 +82,15 @@ abstract class AbstractError extends AbstractHandler
         }
 
         return $text;
+    }
+
+    /**
+     * Wraps the error_log function so that this can be easily tested
+     *
+     * @param string $message
+     */
+    protected function logError($message)
+    {
+        error_log($message);
     }
 }

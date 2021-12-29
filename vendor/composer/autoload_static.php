@@ -18,6 +18,10 @@ class ComposerStaticInitd8cdb924884b54c7591f1894f8f0185a
         array (
             'app\\' => 4,
         ),
+        'W' => 
+        array (
+            'Whoops\\' => 7,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -30,16 +34,17 @@ class ComposerStaticInitd8cdb924884b54c7591f1894f8f0185a
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
-        ),
-        'I' => 
-        array (
-            'Interop\\Container\\' => 18,
         ),
         'F' => 
         array (
             'FastRoute\\' => 10,
+        ),
+        'D' => 
+        array (
+            'Dopesong\\Slim\\Error\\' => 20,
         ),
     );
 
@@ -47,6 +52,10 @@ class ComposerStaticInitd8cdb924884b54c7591f1894f8f0185a
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'Whoops\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
         ),
         'Twig\\' => 
         array (
@@ -64,6 +73,10 @@ class ComposerStaticInitd8cdb924884b54c7591f1894f8f0185a
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
@@ -72,13 +85,13 @@ class ComposerStaticInitd8cdb924884b54c7591f1894f8f0185a
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'Interop\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
-        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Dopesong\\Slim\\Error\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dopesong/slim-whoops/src',
         ),
     );
 
